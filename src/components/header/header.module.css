@@ -1,0 +1,12 @@
+.header_wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    color: #fff;
+    background-color: rgb(23, 96, 159);
+    font-size: 48px;
+}
+.header_wrap span{
+    font-size: 32px;
+}
