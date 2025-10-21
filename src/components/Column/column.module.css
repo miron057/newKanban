@@ -1,38 +1,110 @@
-.column{
- border: 2px solid rgb(23, 96, 159);
- border-radius: 12px;
- padding: 20px;
- width: 30%;
+.column {
+  margin: 20px 10px;
+  border: 2px solid rgb(23, 96, 159);
+  border-radius: 18px;
+  padding: 10px;
+  width: 30%;
 }
-.column h3{
-    text-align: center;
-    color: rgb(23, 96, 159);
-    font-size: 24px;
+
+.column h2 {
+  text-align: center;
+  color: rgb(23, 96, 159);
+  font-size: 24px;
 }
-.task{
+
+.tasks {
+  display: grid;
+  grid-template-columns: 100%;
+  gap: 10px;
+  padding: 4px 8px;
+  margin: 16px auto;
+  background: rgb(55, 155, 255);
+  border-radius: 10px;
+}
+
+.del {
+  border: 2px solid rgb(55, 155, 255);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.del:hover {
+  background-color: #fff;
+  color: red;
+  border: black solid 2px;
+}
+
+.add {
+  border: 2px solid rgb(55, 155, 255);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add:hover {
+  background-color: #fff;
+  color: green;
+  border: black solid 2px;
+}
+
+.column[dragover] {
+  background-color: #e0e0e0;
+}
+
+.task {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 8px;
+  margin: 8px 0;
+  background-color: white;
+  border: 2px solid #ddd;
+  cursor: grab;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.task[dragging] {
+  opacity: 0.5;
+}
+
+.input {
+  border: 2px solid rgb(55, 155, 255);
+}
+
+
+
+@media screen and (max-width: 480px) {
+  .column {
+    width: 30%;
+    margin: 10px 0px;
+    padding: 4px;
+
+  }
+
+  .column h2 {
+    font-size: 12px;
+  }
+
+  .tasks {
+    padding: 4px;
+    gap: 4px;
+    margin: 4px auto;
+  }
+
+  .del,
+  .add {
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+
+  .input {
+    font-size: 12px;
+  }
+
+  .task {
     display: grid;
-    grid-template-columns: 85% 5% 5%;
-    gap: 10px;
-    padding: 12px;
-    margin: 10px auto;
-    background: rgb(55, 155, 255);
-    border-radius: 10px;
- }
- .del{
-    border: 2px ;
-    border-radius: 8px;
-    background-color: red;
- }
- .del:hover{
-    background-color: #fff;
-    color: red;
- }
- .edit{
-    border: 2px;
-    border-radius: 10px;
-    background-color: seagreen;
- }
- .edit:hover{
-    background-color: #fff;
-    color: seagreen;
- }
+    grid-template-columns: 100%;
+    margin: 0px;
+  }
+}
